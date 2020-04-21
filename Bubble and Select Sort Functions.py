@@ -13,10 +13,8 @@ def bubblesort(listname):
             if listcounter < (len(listname) - 1):
 
                 if listname[listcounter] > listname[listcounter + 1]:
-                    temp = listname[listcounter]
-                    listname[listcounter] = listname[listcounter + 1]
-                    listname[listcounter + 1] = temp
-
+                    listname[listcounter],listname[listcounter+1] = listname[listcounter+1],listname[listcounter]
+                  
                     listcounter += 1
 
                 else:
@@ -37,11 +35,8 @@ def selectionsort(listname):
 
             # if it gets the minimum and switches
             if listname[firstposition] > listname[innerposition]:
-                temp = listname[firstposition]
-                listname[firstposition] = listname[innerposition]
-                listname[innerposition] = temp
-
-
+                listname[firstposition],listname[innerposition] = listname[innerposition], listname[firstposition]
+           
     return(listname)
 
 #test
